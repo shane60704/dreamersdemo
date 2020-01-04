@@ -4,18 +4,16 @@
 	<meta charset="UTF-8">
 	<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<title>夢想家甜點坊|購物車</title>
-	<style>
+	<title>夢想家甜點坊|交易紀錄</title>
+    <script src="../assets/js/dialog.js"></script>
+    <style>
         @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
         @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
-        @import url(css/header.css);
-        @import url(css/footer.css);
-        @import url(css/leftnav.css);
-        @import url(css/show.css);
+        @import url(../assets/css/header.css);
+        @import url(../assets/css/footer.css);
+        @import url(../assets/css/leftnav.css);
+        @import url(../assets/css/show.css);
     </style>
-    <script src="js/dialog.js"></script>
-	   
-	    
 </head>
 <body>
     <!-- Header的部分 -->
@@ -33,13 +31,13 @@
                 </ul>
             </li>
             <li>
-                 <a href="shopcar.html" class="C"><img src="images/shopping-cart.png"></a>
+                 <a href="shopcar.html" class="C"><img src="../assets/images/shopping-cart.png"></a>
             </li>
         </ul>
         <header class="main-header">
             <div class="container">
                 <a href="index.html" class="logo">
-                    <img src="images/1.png">
+                    <img src="../assets/images/1.png">
                 </a>
                 <ul class="main-nav">
                     <li>
@@ -74,7 +72,7 @@
     </div>
  <!--登入介面彈跳的部分-->
      <div class="dialog" id="dialog">
-        <div class="close"><a href="#" onclick="closeDialog();"><img src="images/cross.png"></a></div>
+        <div class="close"><a href="#" onclick="closeDialog();"><img src="../assets/images/cross.png"></a></div>
         <div class="BOX1" style="z-index:-1;width: 100%;">
             <div class="login" style="margin:0px auto;">
                 <form class="form"> 
@@ -100,84 +98,87 @@
     </div>
     <!-- 交易紀錄 -->
     <div class="trade">
-    	<div class="trade-title">購物車</div>
+    	<div class="trade-title">交易紀錄</div>
     	<div class="trade-main">
     	    <div class="trade-1">
     	        <ul>
-    	    	    <li><a href="#">您的購物清單</a></li>
+    	    	    <li><a href="#">您的訂單</a></li>
     	        </ul>
     	        <form>
     	        	<input type="search" name="product" size="5">
-    	        	<input type="button" value="搜尋">
+    	        	<input type="button" value="搜尋">   	        
     	        </form>
     	    </div>
     	    <div class="trade-2">
     	    	<table>
     	    		<tr>
-    	    			<th>刪除商品</th>
+    	    			
+    	    			<th>訂單編號</th>
     	    			<th>商品名稱</th>
     	    			<th>商品數量</th>
-    	    			<th>金額</th>
+    	    			<th>商品金額</th>
     	    			<th>總金額</th>
+                        <th>取消訂單</th>
     	    		</tr>
     	    		<tr>
-    	    			<td><input type="button" value="刪除"></td>
+    	    			
+    	    			<td rowspan="2">A049520</td>
     	    			<td>楓糖蛋糕</td>
     	    			<td>1</td>
     	    			<td>580元</td>
     	    			<td rowspan="2" >1,200元</td>
+                        <td rowspan="2"><input type="button" value="取消訂單"></td>
     	    		</tr>
     	    		<tr>
-    	    				<td><input type="button" value="刪除"></td>
     	    			<td>巧克力蛋糕</td>
     	    			<td>1</td>
     	    			<td>620元</td>
-    	    		
+    	    			<td></td>
     	    		</tr>
     	    	</table>
     	    </div>
     	</div>
     	<div class="trade-3">
-    		<a href="#" class="go-shopping"><img src="images/go-shopping.png">繼續購物</a>
-    	 	<a href="checkout.html" class="trade-bill"><img src="images/bill.png">結帳</a>
+    	 	<a href="index.html" class="trade-back"><img src="../assets/images/undo.png">回首頁</a>
+            <a href="#" style="margin-left: 920px;" class="go-shopping"><img src="../assets/images/go-shopping.png">繼續購物</a>
     	</div>
     </div>
     <!--側邊欄位-->
     <div class="stay-left">
-    	<input type="checkbox" name="" id="side-menu-switch">
-	    <div class="side-menu">
-		<form>
-			<input type="search" placeholder="請輸入關鍵字">
-			<button><i class="fa fa-search"></i></button>
-		</form>
-		<nav>
-			<ul>
-				<li class="title">經典蛋糕</li>
-				<li><a href="咖啡蛋糕.html"><i class="fa fa-cutlery" aria-hidden="true"></i>咖啡蛋糕</a></li>
-				<li><a href="起司蛋糕.html"><i class="fa fa-cutlery" aria-hidden="true"></i>起司蛋糕</a></li>
-				<li><a href="草莓乳酪蛋糕.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓乳酪蛋糕</a></li>
-				<li><a href="經典巧克力蛋糕.html"><i class="fa fa-cutlery" aria-hidden="true"></i>經典巧克力蛋糕</a></li>
-			</ul>
-			<ul>
-				<li class="title">馬卡龍</li>
-				<li><a href="咖啡馬卡龍.html"><i class="fa fa-cutlery" aria-hidden="true"></i>咖啡馬卡龍</a></li>
-				<li><a href="香草馬卡龍.html"><i class="fa fa-cutlery" aria-hidden="true"></i>香草馬卡龍</a></li>
-				<li><a href="焦糖可可馬卡龍.html"><i class="fa fa-cutlery" aria-hidden="true"></i>焦糖可可馬卡龍</a></li>
-				<li><a href="巧克力夾心馬卡龍.html"><i class="fa fa-cutlery" aria-hidden="true"></i>巧克力夾心馬卡龍</a></li>
-			</ul>
-			<ul>
-				<li class="title">水果塔</li>
-				<li><a href="草莓水果塔.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓水果塔</a></li>
-				<li><a href="綜合莓水果塔.html"><i class="fa fa-cutlery" aria-hidden="true"></i>綜合莓水果塔</a></li>
-				<li><a href="草莓藍莓水果塔.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓藍莓水果塔</a></li>
-				<li><a href="草莓奇異果水果塔.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓奇異果水果塔</a></li>
-			</ul>
-		</nav>
-		<label for="side-menu-switch">
-			<i class="fa fa-chevron-right" aria-hidden="true"></i>
-		</label>
-	    </div>
-   </div>
+        <input type="checkbox" name="" id="side-menu-switch">
+        <div class="side-menu">
+        <form>
+            <input type="search" placeholder="請輸入關鍵字">
+            <button><i class="fa fa-search"></i></button>
+        </form>
+        <nav>
+            <ul>
+                <li class="title">經典蛋糕</li>
+                <li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>咖啡蛋糕</a></li>
+                <li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>起司蛋糕</a></li>
+                <li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓乳酪蛋糕</a></li>
+                <li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>經典巧克力蛋糕</a></li>
+            </ul>
+            <ul>
+                <li class="title">馬卡龍</li>
+                <li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>咖啡馬卡龍</a></li>
+                <li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>香草馬卡龍</a></li>
+                <li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>焦糖可可馬卡龍</a></li>
+                <li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>巧克力夾心馬卡龍</a></li>
+            </ul>
+            <ul>
+                <li class="title">水果塔</li>
+                <li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓水果塔</a></li>
+                <li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>綜合莓水果塔</a></li>
+                <li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓藍莓水果塔</a></li>
+                <li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓奇異果水果塔</a></li>
+            </ul>
+        </nav>
+        <label for="side-menu-switch">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </label>
+        </div>
+    </div>
    <!-- 側邊欄位 結束 -->
     <!-- Footer的部分 -->
     <br>
@@ -185,7 +186,7 @@
     <div class="footer" style="display: flex;justify-content: center;">
  
 	    <div class="container" style="display: flex;justify-content: center;">
-	    	   	<img src="images/1.png" style="width: 120px; height: 120px;">
+	    	   	<img src="../assets/images/1.png" style="width: 120px; height: 120px;">
 		    <div class="footer-item3" style="width: auto;">
 			    <p style=" font-size: 14px; line-height: 1;">服務時間：周一至周五 A.M 8:00~ P.M 6:00</p>
 			    <p style=" font-size: 14px; line-height: 1;">電話：(02)2860-7594</p>

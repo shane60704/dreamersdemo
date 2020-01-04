@@ -4,47 +4,26 @@
 	<meta charset="UTF-8">
 	<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<title>夢想家甜點坊|管理員編輯商品</title>
-       <script src="js/dialog.js"></script>
-	<style>
+	<title>夢想家甜點坊|管理員訂單查詢</title>
+    <script src="../assets/js/dialog.js"></script>
+    <style>
         @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
         @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
-        @import url(css/header.css);
-        @import url(css/footer.css);
-        @import url(css/leftnav.css);
-        @import url(css/show.css);
-
-	    /*.................編輯商品....................*/
+        @import url(../assets/css/header.css);
+        @import url(../assets/css/footer.css);
+        @import url(../assets/css/leftnav.css);
+        @import url(../assets/css/show.css);
+ 
+	    /*.................交易紀錄....................*/
         .trade{
-        	width:96%;
-        	height:auto;
-        	margin-right:auto;
-        	margin-left:auto;
-        	margin-top:150px;
-        	margin-bottom:50px;
+        	width:95%;
         }
-        .trade-title{
-        	height:60px;
-        	line-height:60px;
-        	font-size:32px;
-        	font-weight:500;
-        	text-align:center;
-        	background-color:#fff;
-        }
-        .trade-main{
-        	background-color:#fff;
-        	height:500px;
-        	border-bottom:1px solid black; 
-        }
-        .trade-1 a{
-        	text-decoration:none;
-        	color:black;
-        }
+
         .trade-1 ul{
         	display:flex;
         	font-size:18px;
         	margin-bottom:0;
-        	margin-right:1200px;
+        	margin-right:1150px;
         }
         .trade-1 li{
            padding:10px 10px 5px 10px;
@@ -65,18 +44,18 @@
         	font-size:18px;
         }
         .trade-2 table th{
-        
+
           background-color: rgb(255, 224, 224,0.8);
 		  padding:10px;
 		  border:1.5px solid rgb(138, 0, 0);
 		  color:#000;
         }
-         .trade-2 td{
-        
+        .trade-2 table td{
+
           background-color: rgb(255, 224, 224,0.2);
-		  padding:10px;
-		  border:1.5px solid rgb(138, 0, 0);
-		  color:rgb(138, 0, 0);
+		  padding:3px;
+		  border:1px solid rgb(255, 133, 133);
+		  color:#000;
         }
         .trade-3{
         	margin-top:20px;
@@ -112,7 +91,10 @@
         }
         }
 	    /*.................交易紀錄....................*/
-	</style>
+
+
+		</style>
+
 </head>
 <body>
     <!-- Header的部分 -->
@@ -130,13 +112,13 @@
                 </ul>
             </li>
             <li>
-                 <a href="managershow.html" class="C"><img src="images/shopping-cart.png"></a>
+                 <a href="managershow.html" class="C"><img src="../assets/images/shopping-cart.png"></a>
             </li>
         </ul>
         <header class="main-header">
             <div class="container">
                 <a href="index.html" class="logo">
-                    <img src="images/1.png">
+                    <img src="../assets/images/1.png">
                 </a>
                 <ul class="main-nav">
                     <li>
@@ -171,7 +153,7 @@
     </div>
  <!--登入介面彈跳的部分-->
      <div class="dialog" id="dialog">
-        <div class="close"><a href="#" onclick="closeDialog();"><img src="images/cross.png"></a></div>
+        <div class="close"><a href="#" onclick="closeDialog();"><img src="../assets/images/cross.png"></a></div>
         <div class="BOX1" style="z-index:-1;width: 100%;">
             <div class="login" style="margin:0px auto;">
                 <form class="form"> 
@@ -197,11 +179,11 @@
     </div>
     <!-- 交易紀錄 -->
     <div class="trade">
-    	<div class="trade-title">編輯商品</div>
+    	<div class="trade-title">訂單查詢</div>
     	<div class="trade-main">
     	    <div class="trade-1">
     	        <ul>
-    	    	    <li><a href="#">商品資訊</a></li>
+    	    	    <li><a href="#">訂單資料</a></li>
     	        </ul>
     	        <form>
     	        	<input type="search" name="product" size="5">
@@ -211,37 +193,40 @@
     	    <div class="trade-2">
     	    	<table>
     	    		<tr>
-    	    			<th>商品編號</th>
+    	    			<th>訂單編號</th>
     	    			<th>商品名稱</th>
-    	    			<th>售價</th>
-    	    			<th>庫存</th>
-    	    			<th>顯示圖片</th>
-    	    			<th>商品簡介</th>
-    	    			<th>編輯/刪除</th>
+    	    			<th>商品數量</th>
+    	    			<th>商品金額</th>
+    	    			<th>總金額</th>
+    	    			<th>取消訂單</th>
     	    		</tr>
     	    		<tr>
+    	    		
+    	    			<td rowspan="2">A049520</td>
+    	    			<td>楓糖蛋糕</td>
     	    			<td>1</td>
-    	    			<td><textarea style="width: 150px;">經典巧克力蛋糕</textarea></td>
-    	    			<td><textarea style="width: 50px;">$520</textarea></td>
-    	    			<td><textarea style="width: 50px;">10</textarea></td>
-    	    			<td><textarea style="width: 250px;">images/經典巧克力蛋糕.jpg</textarea></td>
-    	    			<td><textarea style="width: 400px;">法國濃郁巧克力，採用國外高品質原料，加上無毒雞蛋，經典口味也能精艷喜愛甜點的您。</textarea></td>
-    	    			<td><input type="button" value="編輯"> <input type="button" value="刪除">  </td>
+    	    			<td>580元</td>
+    	    			<td rowspan="2" >1,200元</td>
+    	    			<td rowspan="2" ><input type="button" value="取消訂單"> </td>
     	    		</tr>
-
+    	    		<tr>
+    	    			<td>巧克力蛋糕</td>
+    	    			<td>1</td>
+    	    			<td>620元</td>
+    	    			
+    	    		</tr>
     	    	</table>
     	    </div>
     	</div>
-    	
+ 
     </div>
-   
     <!-- Footer的部分 -->
     <br>
 	<hr class="style-two" style="justify-content: center;">
     <div class="footer" style="display: flex;justify-content: center;">
  
 	    <div class="container" style="display: flex;justify-content: center;">
-	    	   	<img src="images/1.png" style="width: 120px; height: 120px;">
+	    	   	<img src="../assets/images/1.png" style="width: 120px; height: 120px;">
 		    <div class="footer-item3" style="width: auto;">
 			    <p style=" font-size: 14px; line-height: 1;">服務時間：周一至周五 A.M 8:00~ P.M 6:00</p>
 			    <p style=" font-size: 14px; line-height: 1;">電話：(02)2860-7594</p>

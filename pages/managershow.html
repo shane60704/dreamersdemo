@@ -4,16 +4,16 @@
 	<meta charset="UTF-8">
 	<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<title>夢想家|註冊帳號</title>
-     <style>
+	<title>夢想家|管理員畫面</title>
+    <script src="../assets/js/dialog.js"></script>
+    <style>
         @import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
         @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
-        @import url(css/header.css);
-        @import url(css/footer.css);
-        @import url(css/leftnav.css);
-        @import url(css/show.css);
+        @import url(../assets/css/header.css);
+        @import url(../assets/css/footer.css);
+        @import url(../assets/css/leftnav.css);
+        @import url(../assets/css/show.css);
     </style>
-    <script src="js/dialog.js"></script>
 	
 
 </head>
@@ -27,46 +27,46 @@
             <li>
                 <a href="#" class="B">ACCOUNT</a>
                 <ul class="account">
-                    <li><a href="record.html">交易紀錄</a></li>
-                    <li><a href="addaccount.html">會員註冊</a></li>
-                    <li><a href="altermember.html">會員資料修改</a></li>
+                    <li><a href="manageradd.html">新增商品</a></li>
+                    <li><a href="manageralter.html">編輯商品</a></li>
+                    <li><a href="managerorder.html">訂單查詢</a></li>
                 </ul>
             </li>
             <li>
-                 <a href="shopcar.html" class="C"><img src="images/shopping-cart.png"></a>
+                 <a href="managershow.html" class="C"><img src="../assets/images/shopping-cart.png"></a>
             </li>
         </ul>
         <header class="main-header">
             <div class="container">
                 <a href="index.html" class="logo">
-                    <img src="images/1.png">
+                    <img src="../assets/images/1.png">
                 </a>
                 <ul class="main-nav">
                     <li>
                         <a href="#" class="main-nav-a">關於我們</a>
                         <ul class="about-us">
-                            <li><a href="about-us.html">關於我們</a></li>
-                            <li><a href="greatshop.html">品牌優勢</a></li>
+                            <li><a href="managershow.html">關於我們</a></li>
+                            <li><a href="managershow.html">品牌優勢</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#" class="inner-right main-nav-a">MENU</a>
                         <ul class="menu">
-                            <li><a href="MENU.html">所有商品</a></li>
-                            <li><a href="CAKE.html">經典蛋糕</a></li>
-                            <li><a href="MACARON.html">馬卡龍</a></li>
-                            <li><a href="FRUIT.html">水果塔</a></li>
+                            <li><a href="managershow.html">所有商品</a></li>
+                            <li><a href="managershow.html">經典蛋糕</a></li>
+                            <li><a href="managershow.html">馬卡龍</a></li>
+                            <li><a href="managershow.html">水果塔</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#" class="inner-left main-nav-a">熱門商品</a>
                         <ul class="only">
-                            <li><a href="POP.html">人氣排行</a></li>
-                            <li><a href="GROUP.html">團購排行</a></li>
+                            <li><a href="managershow.html">人氣排行</a></li>
+                            <li><a href="managershow.html">團購排行</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="normal-question.html" class="main-nav-a">常見問題</a>
+                        <a href="managershow.html" class="main-nav-a">常見問題</a>
                     </li>
                 </ul>
             </div>
@@ -74,7 +74,7 @@
     </div>
  <!--登入介面彈跳的部分-->
      <div class="dialog" id="dialog">
-        <div class="close"><a href="#" onclick="closeDialog();"><img src="images/cross.png"></a></div>
+        <div class="close"><a href="#" onclick="closeDialog();"><img src="../assets/images/cross.png"></a></div>
         <div class="BOX1" style="z-index:-1;width: 100%;">
             <div class="login" style="margin:0px auto;">
                 <form class="form"> 
@@ -98,85 +98,23 @@
             </div>     
         </div>
     </div>
-    <!-- 註冊畫面的部分 -->
+    <!-- 管理員畫面的部分 -->
         <div class="BOX2" style="z-index: -1;width: 100%; padding-top: 150px;">
-		<div class="login-1" style="margin:0px auto; height: 800px;">
+		<div class="login-1" style="margin:0px auto; width:1000px;height: 280px;">
         	<form class="form-1"> 
-				<h2>註冊會員</h2>
-				<div class="group-1">
-					<label for="user-name">姓名</label>
-					<input type="text" onkeyup="value=value.replace(/[\d]/g,'') "onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[\d]/g,''))" name="" id="username">
-				</div>
-				<div class="group-1">
-					<label for="user-mail">電子郵件</label>
-					<input type="text" name="" id="usermail">
-				</div>
-				<div class="group-1">
-					<label for="user-phone">手機號碼</label>
-					<input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" name="" id="userphone">
-				</div>
-				<div class="group-1">
-					<label for="user-loc">住址</label>
-					<input type="text" name="" id="userloc">
-				</div>
-				<div class="group-1">
-					<label for="user-id">設定帳號</label>
-					<input type="text" onKeyUp="value=value.replace(/[\W]/g,'')" name="" id="userpassword" maxlength="10" name="" id="userid">
-				</div>
-				<div class="group-1">
-					<label for="user-password">設定密碼</label>
-					<input type="password" onKeyUp="value=value.replace(/[\W]/g,'')" name="" id="userpassword" maxlength="10" name="" id="userpassword">
-				</div>
-				<div class="btn-group-1">
-					<button class="btn-1">加入會員</button>
-				</div>
+				<h2>管理員畫面，僅可使用 <i>ACCOUNT & SIGN IN</i> 功能<br><br>如欲瀏覽畫面，請 <i>切換帳號</i> 或 <i>登出</i> 查看前台畫面</h2>
+				
 			</form>
 		</div>     
     </div>
-    <!--側邊欄位-->
-    <div class="stay-left">
-    	<input type="checkbox" name="" id="side-menu-switch">
-	    <div class="side-menu">
-		<form>
-			<input type="search" placeholder="請輸入關鍵字">
-			<button><i class="fa fa-search"></i></button>
-		</form>
-		<nav>
-			<ul>
-				<li class="title">經典蛋糕</li>
-				<li><a href="咖啡蛋糕.html"><i class="fa fa-cutlery" aria-hidden="true"></i>咖啡蛋糕</a></li>
-				<li><a href="起司蛋糕.html"><i class="fa fa-cutlery" aria-hidden="true"></i>起司蛋糕</a></li>
-				<li><a href="草莓乳酪蛋糕.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓乳酪蛋糕</a></li>
-				<li><a href="經典巧克力蛋糕.html"><i class="fa fa-cutlery" aria-hidden="true"></i>經典巧克力蛋糕</a></li>
-			</ul>
-			<ul>
-				<li class="title">馬卡龍</li>
-				<li><a href="咖啡馬卡龍.html"><i class="fa fa-cutlery" aria-hidden="true"></i>咖啡馬卡龍</a></li>
-				<li><a href="香草馬卡龍.html"><i class="fa fa-cutlery" aria-hidden="true"></i>香草馬卡龍</a></li>
-				<li><a href="焦糖可可馬卡龍.html"><i class="fa fa-cutlery" aria-hidden="true"></i>焦糖可可馬卡龍</a></li>
-				<li><a href="巧克力夾心馬卡龍.html"><i class="fa fa-cutlery" aria-hidden="true"></i>巧克力夾心馬卡龍</a></li>
-			</ul>
-			<ul>
-				<li class="title">水果塔</li>
-				<li><a href="草莓水果塔.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓水果塔</a></li>
-				<li><a href="綜合莓水果塔.html"><i class="fa fa-cutlery" aria-hidden="true"></i>綜合莓水果塔</a></li>
-				<li><a href="草莓藍莓水果塔.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓藍莓水果塔</a></li>
-				<li><a href="草莓奇異果水果塔.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓奇異果水果塔</a></li>
-			</ul>
-		</nav>
-		<label for="side-menu-switch">
-			<i class="fa fa-chevron-right" aria-hidden="true"></i>
-		</label>
-	    </div>
-   </div>
-   <!-- 側邊欄位 結束 -->
+    
     <!-- Footer的部分 -->
     <br>
 	<hr class="style-two" style="justify-content: center;">
     <div class="footer" style="display: flex;justify-content: center;">
  
 	    <div class="container" style="display: flex;justify-content: center;">
-	    	   	<img src="images/1.png" style="width: 120px; height: 120px;">
+	    	   	<img src="../assets/images/1.png" style="width: 120px; height: 120px;">
 		    <div class="footer-item3" style="width: auto;">
 			    <p style=" font-size: 14px; line-height: 1;">服務時間：周一至周五 A.M 8:00~ P.M 6:00</p>
 			    <p style=" font-size: 14px; line-height: 1;">電話：(02)2860-7594</p>

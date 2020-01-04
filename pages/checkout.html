@@ -4,18 +4,16 @@
 	<meta charset="UTF-8">
 	<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/animate.css">
-	<title>夢想家|常見問題</title>
+	<title>夢想家|結帳</title>
+	<script src="../assets/js/dialog.js"></script>
 	<style>
 		@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
 		@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
-		@import url(css/header.css);
-		@import url(css/footer.css);
-		@import url(css/leftnav.css);
-		@import url(css/show.css);
-        
-		</style>
-	<script src="js/dialog.js"></script>
+		@import url(../assets/css/header.css);
+		@import url(../assets/css/footer.css);
+		@import url(../assets/css/leftnav.css);
+		@import url(../assets/css/show.css);
+	</style>
 </head>
 <body>
 	<!-- Header的部分 -->
@@ -33,13 +31,13 @@
 		        </ul>
 		    </li>
 		    <li>
-		    	 <a href="shopcar.html" class="C"><img src="images/shopping-cart.png"></a>
+		    	 <a href="shopcar.html" class="C"><img src="../assets/images/shopping-cart.png"></a>
 		    </li>
 	    </ul>
 	    <header class="main-header">
 	        <div class="container">
 		        <a href="index.html" class="logo">
-			        <img src="images/1.png">
+			        <img src="../assets/images/1.png">
 		        </a>
 		        <ul class="main-nav">
 		        	<li>
@@ -74,7 +72,7 @@
     </div>
  <!--登入介面彈跳的部分-->
      <div class="dialog" id="dialog">
-    	<div class="close"><a href="#" onclick="closeDialog();"><img src="images/cross.png"></a></div>
+    	<div class="close"><a href="#" onclick="closeDialog();"><img src="../assets/images/cross.png"></a></div>
         <div class="BOX1" style="z-index:-1;width: 100%;">
 		    <div class="login" style="margin:0px auto;">
         	    <form class="form"> 
@@ -98,39 +96,73 @@
 		    </div>     
         </div>
     </div>
-    <!-- 常見問題 -->
-    <div class="question">
-	<!-- item 1  -->
-	<div class="item animated bounceInLeft" style="animation-delay:0.6s">
-		<div class="pic">
-			<img src="images/12.jpeg">
-		</div>
-		<div class="txt">
-			<h2>宅配方式</h2>
-			<p>目前只提供來店取貨、宅配以及超商取貨(貨到付款)，共以上三種方式，現正積極與Uber Eat、Food pand洽談合作，近請期待。</p>
-		</div>
-	</div>
-	<!-- item 2  -->
-	<div class="item animated bounceInRight" style="animation-delay:0.6s">
-		<div class="txt">
-			<h2>會員優惠</h2>
-			<p>分級制度，當消費金額到達一定上限，則可以升級，每級皆有專屬優惠及折扣，更有優渥的生日來店禮，如欲申辦，近請撥打電話或來電洽詢。</p>
-		</div>
-		<div class="pic">
-			<img src="images/13.jpeg">
-		</div>
-	</div>
-	<!-- item 3  -->
-	<div class="item animated bounceInLeft" style="animation-delay:0.6s">
-		<div class="pic">
-			<img src="images/14.jpeg">
-		</div>
-		<div class="txt">
-			<h2>保存方式</h2>
-			<p>甜點皆是當天現做，請於購買後盡速冷藏，並可保存三天，若置於常溫中，請於一小時內食用完畢，以免錯過產品最佳賞味期。</p>
-		</div>
-	</div>
-</div>
+    <div class="bill">
+    	<p class="bill-title">結帳</p>
+    	<div class="bill-inside">
+    		<div class="bill-table">
+    		    <table>
+    			    <tr>
+    				    <th>商品名稱</th>
+    				    <th>數量</th>
+    				    <th>金額</th>
+    			    </tr>
+    			    <tr>
+    			    	<td>巧克力蛋糕</td>
+    			    	<td>1</td>
+    			    	<td>NT$740</td>
+    			    </tr>
+    			    <tr>
+    			    	<td>藍莓蛋糕</td>
+    			    	<td>1</td>
+    			    	<td>NT$748</td>
+    			    </tr>
+    		    </table>
+    		</div>
+    		<div class="bill-main">
+    			<table>
+    				<tr>
+    					<th>小計:</th>
+    					<td>NT$1,548</td>
+    				</tr>
+    				<tr>
+    					<th class="border-bottom">運費:</th>
+    					<td class="border-bottom">NT$60</td>
+    				   
+    				</tr>
+    				<tr>
+    					<th>合計:</th>
+    					<td>NT$1,608</td>
+    				</tr>
+    			</table>
+    			<div class="bill-select">
+    				<p>送貨與付款方式</p>
+    				<div class="location">
+    			        <p>地址 :</p>
+    			         <input type="text" name="address" value="請留下您的地址" size="25" maxlength="25" /> 
+    				</div>
+    				<div class="deliver">
+    				    <p>運送方式 :</p>
+    				    <select size="1" name="deliver-method">
+    				        <option>7-11取貨付款(貨到付款)</option>
+    				        <option>全家取貨付款(貨到付款)</option>
+    				        <option>黑貓宅急便(預設地址)</option>
+    				    </select> 
+    				</div>
+    				<div class="pay">
+    				    <p>付款方式 :</p>
+    				    <select size="1" name="pay-method">
+    				        <option>貨到付款</option>
+    				        <option>轉帳</option> 
+    				        <option>信用卡</option> 
+    				    </select> 
+    				</div>
+    				<div class="buy-now">
+    				    <input type="button" value="立即購買"/>
+    				</div> 
+    			</div>
+    		</div>
+    	</div>
+     </div>
     <!--側邊欄位-->
     <div class="stay-left">
     	<input type="checkbox" name="" id="side-menu-switch">
@@ -142,24 +174,24 @@
 		<nav>
 			<ul>
 				<li class="title">經典蛋糕</li>
-				<li><a href="咖啡蛋糕.html"><i class="fa fa-cutlery" aria-hidden="true"></i>咖啡蛋糕</a></li>
-				<li><a href="起司蛋糕.html"><i class="fa fa-cutlery" aria-hidden="true"></i>起司蛋糕</a></li>
-				<li><a href="草莓乳酪蛋糕.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓乳酪蛋糕</a></li>
-				<li><a href="經典巧克力蛋糕.html"><i class="fa fa-cutlery" aria-hidden="true"></i>經典巧克力蛋糕</a></li>
+				<li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>咖啡蛋糕</a></li>
+				<li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>起司蛋糕</a></li>
+				<li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓乳酪蛋糕</a></li>
+				<li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>經典巧克力蛋糕</a></li>
 			</ul>
 			<ul>
 				<li class="title">馬卡龍</li>
-				<li><a href="咖啡馬卡龍.html"><i class="fa fa-cutlery" aria-hidden="true"></i>咖啡馬卡龍</a></li>
-				<li><a href="香草馬卡龍.html"><i class="fa fa-cutlery" aria-hidden="true"></i>香草馬卡龍</a></li>
-				<li><a href="焦糖可可馬卡龍.html"><i class="fa fa-cutlery" aria-hidden="true"></i>焦糖可可馬卡龍</a></li>
-				<li><a href="巧克力夾心馬卡龍.html"><i class="fa fa-cutlery" aria-hidden="true"></i>巧克力夾心馬卡龍</a></li>
+				<li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>咖啡馬卡龍</a></li>
+				<li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>香草馬卡龍</a></li>
+				<li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>焦糖可可馬卡龍</a></li>
+				<li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>巧克力夾心馬卡龍</a></li>
 			</ul>
 			<ul>
 				<li class="title">水果塔</li>
-				<li><a href="草莓水果塔.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓水果塔</a></li>
-				<li><a href="綜合莓水果塔.html"><i class="fa fa-cutlery" aria-hidden="true"></i>綜合莓水果塔</a></li>
-				<li><a href="草莓藍莓水果塔.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓藍莓水果塔</a></li>
-				<li><a href="草莓奇異果水果塔.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓奇異果水果塔</a></li>
+				<li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓水果塔</a></li>
+				<li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>綜合莓水果塔</a></li>
+				<li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓藍莓水果塔</a></li>
+				<li><a href="commodity.html"><i class="fa fa-cutlery" aria-hidden="true"></i>草莓奇異果水果塔</a></li>
 			</ul>
 		</nav>
 		<label for="side-menu-switch">
@@ -167,12 +199,14 @@
 		</label>
 	    </div>
     </div>
-    <!-- footer的欄位 -->
+   <!-- 側邊欄位 結束 -->
+    <!-- Footer的部分 -->
     <br>
 	<hr class="style-two" style="justify-content: center;">
     <div class="footer" style="display: flex;justify-content: center;">
+ 
 	    <div class="container" style="display: flex;justify-content: center;">
-	    	   	<img src="images/1.png" style="width: 120px; height: 120px;">
+	    	   	<img src="../assets/images/1.png" style="width: 120px; height: 120px;">
 		    <div class="footer-item3" style="width: auto;">
 			    <p style=" font-size: 14px; line-height: 1;">服務時間：周一至周五 A.M 8:00~ P.M 6:00</p>
 			    <p style=" font-size: 14px; line-height: 1;">電話：(02)2860-7594</p>
@@ -181,6 +215,14 @@
 		    </div>
         </div>
     </div>
+
+    
+<!--BACKtoTOP-START
+    <div class="backtotop">
+    	<a style="display:scroll;position:fixed;bottom:0px;right:5px;" href="#" title="" onFocus="if(this.blur)this.blur()">
+        <img alt='' border='0' onmouseover="this.src='images/home.png'" src="images/home.png" onmouseout="this.src='images/home.png'" /></a>
+    </div>-->
+<!--BACKtoTOP-STOP-->
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
